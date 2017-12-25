@@ -1,3 +1,4 @@
+language: php
 deploy:
   provider: ftp
   host: ftp://$FTP_HOST
