@@ -1,9 +1,7 @@
 language: php
-deploy:
-  provider: ftp
-  host: ftp://FTP_HOST
-  user: FTP_USERNAME
-  password: FTP_PASSWORD
-  skip_cleanup: true
-  on:
-    branch: master
+env:
+  global:
+    - "FTP_USER=user"
+    - "FTP_PASSWORD=password"
+after_success:
+    "curl --ftp-create-dirs -T uploadfilename -u $FTP_USERNAME:$FTP_PASSWORD ftp://$FTP_HOST"
