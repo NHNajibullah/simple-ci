@@ -1,0 +1,8 @@
+deploy:
+  provider: ftp
+  host: ftp://$FTP_HOST
+  user: $FTP_USERNAME
+  password: $FTP_PASSWORD
+  skip_cleanup: true
+  on:
+    branch: master
