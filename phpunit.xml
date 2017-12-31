@@ -1,4 +1,7 @@
-<phpunit bootstrap="index.php">
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+    bootstrap="index.php"
+    stopOnFailure="false">
   <testsuites>
     <testsuite name="mytest">
       <directory>tests</directory>
