@@ -1,6 +1,6 @@
 <?php
 
-require_once('../index.php');
+require_once('index.php');
 
 class indexTest extends PHPUnit_Framework_TestCase
 {
