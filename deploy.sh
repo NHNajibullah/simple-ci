@@ -22,7 +22,7 @@ else
 		if [ "$f" != ".travis.yml" ] && [ "$f" != "deploy.sh" ] && [ "$f" != "test.js" ] && [ "$f" != "package.json" ]
 		then
 	 		echo "Uploading $f"
-	 		curl --ftp-create-dirs -T $f -u $FTP_USER:$FTP_PASS ftp://$FTP_HOST/$f
+	 		curl --ftp-create-dirs -T $f -u $FTP_USERNAME:$FTP_PASSWORD ftp://$FTP_HOST/$f
 		fi
 	done
 fi
