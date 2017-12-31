@@ -9,6 +9,6 @@ class indexTest extends PHPUnit_Framework_TestCase
 
   public function testIndex()
   {
-    $this->AssertContains('Hello World', 'Hello World');
+    $this->AssertContains('Hello World', "Hello World");
   }
 }
