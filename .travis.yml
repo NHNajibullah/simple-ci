@@ -3,4 +3,4 @@ branches:
   only:
     - master
 after_success:
-    - ./deploy.sh
+    - deploy.sh
