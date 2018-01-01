@@ -2,17 +2,5 @@ language: php
 branches:
   only:
     - master
-before_script:
-  - git clone https://github.com/NHNajibullah/simple-ci.git
-  - git clone https://github.com/git-ftp/git-ftp.git
-  - cd git-ftp
-  - tag="$(git tag | grep '^[0-9]*\.[0-9]*\.[0-9]*$' | tail -1)"
-  - git checkout "$tag"
-  - sudo make install
-  - cd ../simple-ci
-
-script:
-  - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$FTP_HOST
-
-after_script:
-  - echo "Build Berhasil"
+after_success:
+    - ./deploy.sh
