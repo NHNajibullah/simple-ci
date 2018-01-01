@@ -14,6 +14,3 @@ before_script:
 
 script:
   - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$FTP_HOST
-
-after_script:
-  - echo "Build Berhasil"
