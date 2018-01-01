@@ -2,5 +2,14 @@ language: php
 branches:
   only:
     - master
-after_success:
-    - ./deploy.sh
+before_script:
+  - git clone https://github.com/NHNajibullah/simple-ci.git
+  - cd simple-ci
+  - apt-get update
+  - apt-get -qq install git-ftp
+
+script:
+  - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$FTP_HOST
+
+after_script:
+  - echo "Build Berhasil"
